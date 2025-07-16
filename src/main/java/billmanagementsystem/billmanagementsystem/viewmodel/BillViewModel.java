@@ -12,14 +12,15 @@ public class BillViewModel {
     this.Bill = new SimpleObjectProperty<>(bill);
   }
 
+  public ObjectProperty<Bill> getBill() {
+    return Bill;
+  }
+
   /**
-   * This specific method is highly important for the functionality of the application.
-   * It is responsible for several highly important updates on the GUI.
-   * Therefore, this method involves highly-complex logic in order tu ensure
-   * the correct actualization of the GUI.
-   * This implementation takes a lot of time to understand it, but it is necessary
-   * to point out the significance of this method. One fundamental aspect is the Parameter
-   * changedBill. Its existence is crucial for the method to work properly.
+   * This specific method onBillChanged is highly important for the functionality of the application.
+   * It is responsible for several updates on the GUI in order to offer a well organized overview.
+   * Therefore, this method involves highly-complex logic in order to ensure
+   * the correct actualization of the GUI in regard to the needs of the customer.
    */
   public void onBillChanged(Bill changedBill) {
     System.out.println("Bill changed");

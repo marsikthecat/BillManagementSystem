@@ -1,28 +1,49 @@
 package billmanagementsystem.billmanagementsystem.controller;
 
-// I had a lot of fun while writing this code.
+import billmanagementsystem.billmanagementsystem.service.BillService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+// REST in peace for those who quit the job because of me.
+
+@RestController
+@RequestMapping("/api/bill")
 public class BillController {
 
-  // private BillService billService = new BillService();  <= Why can I not instantiate that :(
+  private final BillService billService = new BillService();
 
-
-
-
-
-  // This is protected because it makes things safer
-  // And why? Well, because it's protected!
-  protected void handleBill() {
-    System.out.println("Bill successfully handled.");
+  // This method is protected because it makes things safer. And why? Well, because it's protected!
+  @PostMapping("/handle")
+  protected ResponseEntity<String> handleBill() {
+    return ResponseEntity.ok("Bill successfully handled. ✅");
   }
 
-  private void processBill() {
-    System.out.println("Processing complete. Bill is ready for the next step.");
+  @PostMapping("/process")
+  public ResponseEntity<String> processBill() {
+    return ResponseEntity.ok("Processing complete. Bill is ready for the next step. 🧠💼");
   }
 
+  @PostMapping("/cloud")
+  public ResponseEntity<String> uploadBillToCloud() {
+    return ResponseEntity.badRequest()
+            .header("X-Error-Header",  "Bro, you know that you cannot upload to clouds")
+            .body("They are wet and high in the sky️");
+  }
+
+  @GetMapping("/cookies")
+  public ResponseEntity<String> getCookie() {
+    ResponseEntity.BodyBuilder responseEntity =  ResponseEntity.badRequest();
+    return responseEntity.header("Bold-Head", "No cookies today my friend!")
+            .body("Cuz ur fat and need to go to the gym");
+  }
 
   // Whoever implemented that is a genius
-  private void printSystemStatusToAdmin() {
-    System.out.print("SystemStatusToAdmin");
+  private void sendOutPayment() {
+    double payment = 0;
+    System.out.println("Your payment: " + payment);
   }
 
   private void turnOff() {

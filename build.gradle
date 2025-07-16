@@ -35,7 +35,10 @@ javafx {
 }
 
 dependencies {
-
+    implementation 'org.openjfx:javafx-controls:17.0.6'
+    implementation('org.springframework.boot:spring-boot-starter:3.2.5') {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+    }
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
