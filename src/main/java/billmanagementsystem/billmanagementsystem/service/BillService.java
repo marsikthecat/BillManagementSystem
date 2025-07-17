@@ -1,7 +1,6 @@
 package billmanagementsystem.billmanagementsystem.service;
 
 import billmanagementsystem.billmanagementsystem.model.Bill;
-
 import java.util.ArrayList;
 
 /**
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 
 public class BillService {
 
-    private ArrayList<Bill> listOfBills;
+    public ArrayList<Bill> listOfBills;
 
     public BillService() {
       listOfBills = new ArrayList<>();
