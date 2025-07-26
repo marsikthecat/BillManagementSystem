@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="airport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bill Management</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container">
+    <h1>💸 Bill Management System</h1>
+    <form id="billForm">
+        <label for="description"></label><input type="text" id="description" placeholder="Description" required />
+        <label for="amount"></label><input type="number" id="amount" placeholder="Amount (€)" required />
+        <button type="submit">Add Bill</button>
+    </form>
+    <!-- There are currently 4 Bills in the System -->
+    <h2>List of Bills:</h2>
+    <ul id="billList">
+        <li>Bill 1</li>
+        <li>Bill 2</li>
+        <li>Bill 3</li>
+        <li>Bill 4</li>
+    </ul>
+    <h2>Processed Bills:</h2>
+    <ul id="processedBillList">
+        <li>Bill 1</li>
+        <li>Bill 2</li>
+        <li>Bill 3</li>
+        <li>Bill 4</li>
+    </ul>
+    <button id="processBills" onclick="alert('Bills successfully processed')"> Process Bills </button>
+    <button id="GetCloudAccess" onclick="alert('Cloud Access Granted')"> Get Cloud Access</button>
+</div>
+<script src="billservice.js"></script>
+</body>
+</html>
