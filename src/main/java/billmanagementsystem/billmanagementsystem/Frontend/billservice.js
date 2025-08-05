@@ -13,7 +13,7 @@ One day during the daily stand-up meeting:
 
 Product Manager: Did you push your implemented code to the branch?
 
-Me: Yes, sir I implemented it successfully! Check it out if you want :)
+Me: Yes, sir! I implemented it successfully! Check it out if you want :)
 
 Product Manager: Ok let me look at your work...
 
@@ -38,5 +38,6 @@ Product Manager: Listen! The bill does not appear to be in the database,
 Me: I am not fooling you, sir – the alert says it's added.
     If it wasn't, it would have said that it wasn't added.
 
-// This is the end of the story, but not the end of the code.
+// This is the end of the code, but not the end of the story.
+
 */
